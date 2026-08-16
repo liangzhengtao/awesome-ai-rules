@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: "**/*.md"
+        continue-on-error: true
+
+  validate:
+    name: Validate Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required files exist
+        run: |
+          echo "Checking project structure..."
+          test -f README.md || (echo "Missing README.md" && exit 1)
+          test -f LICENSE || (echo "Missing LICENSE" && exit 1)
+          test -f CONTRIBUTING.md || (echo "Missing CONTRIBUTING.md" && exit 1)
+          test -d rules/frameworks || (echo "Missing rules/frameworks" && exit 1)
+          test -d rules/scenarios || (echo "Missing rules/scenarios" && exit 1)
+          test -d rules/tools || (echo "Missing rules/tools" && exit 1)
+          echo "All required files present!"
+
+      - name: Count rule files
+        run: |
+          count=$(find rules -name "*.md" | wc -l)
+          echo "Found $count rule files"
+          if [ "$count" -lt 10 ]; then
+            echo "Error: Expected at least 10 rule files, found $count"
+            exit 1
+          fi
+
+      - name: Check for broken links
+        run: |
+          echo "Checking internal links..."
+          grep -r "\[.*\](.*)" rules/ --include="*.md" | head -20 || true
