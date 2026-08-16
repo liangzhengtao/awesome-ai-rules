@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate structure
+        run: |
+          test -f README.md && test -f LICENSE && test -d rules/frameworks && test -d rules/scenarios && test -d rules/tools
+          count=$(find rules -name "*.md" | wc -l)
+          echo "Found $count rule files"
+          [ "$count" -ge 10 ] || (echo "Expected at least 10 rules" && exit 1)
+          echo "All checks passed!"
