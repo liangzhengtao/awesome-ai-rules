@@ -139,6 +139,14 @@ Yes! See [CONTRIBUTING.md](CONTRIBUTING.md). We especially need rules for new fr
 
 ---
 
+## See Also
+
+| Project | Description |
+|---------|-------------|
+| [**vibe-check**](https://github.com/OWNER/vibe-check) | `npx vibe-check` — Score your project's AI-readiness |
+| [**ai-commit**](https://github.com/OWNER/ai-commit) | `npx ai-commit` — AI writes your commit messages |
+| [**awesome-mcp-servers**](https://github.com/OWNER/awesome-mcp-servers) | MCP servers for Cursor, Claude Code, and Kimi Code |
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
