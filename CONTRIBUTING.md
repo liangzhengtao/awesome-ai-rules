@@ -11,7 +11,7 @@
 ```bash
 # Fork 项目到你的 GitHub 账号
 # 然后克隆到本地
-git clone https://github.com/OWNER/awesome-ai-rules.git
+git clone https://github.com/liangzhengtao/awesome-ai-rules.git
 cd awesome-ai-rules
 ```
 
@@ -299,4 +299,4 @@ A: 当然！只要你的工具是 AI 编程助手，我们都欢迎。
 
 感谢所有贡献者的努力！
 
-[![Contributors](https://contrib.rocks/image?repo=OWNER/awesome-ai-rules)](https://github.com/OWNER/awesome-ai-rules/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=liangzhengtao/awesome-ai-rules)](https://github.com/liangzhengtao/awesome-ai-rules/graphs/contributors)

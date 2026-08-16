@@ -119,7 +119,7 @@ All rules have **version annotations** so you know which framework version they 
 
 | Tool | Purpose |
 |------|---------|
-| [**vibe-check**](https://github.com/OWNER/vibe-check) | `npx vibe-check` — score your project's AI-readiness |
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — score your project's AI-readiness |
 
 ---
 
@@ -143,9 +143,9 @@ Yes! See [CONTRIBUTING.md](CONTRIBUTING.md). We especially need rules for new fr
 
 | Project | Description |
 |---------|-------------|
-| [**vibe-check**](https://github.com/OWNER/vibe-check) | `npx vibe-check` — Score your project's AI-readiness |
-| [**ai-commit**](https://github.com/OWNER/ai-commit) | `npx ai-commit` — AI writes your commit messages |
-| [**awesome-mcp-servers**](https://github.com/OWNER/awesome-mcp-servers) | MCP servers for Cursor, Claude Code, and Kimi Code |
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — Score your project's AI-readiness |
+| [**ai-commit**](https://github.com/liangzhengtao/ai-commit) | `npx ai-commit` — AI writes your commit messages |
+| [**awesome-mcp-servers**](https://github.com/liangzhengtao/awesome-mcp-servers) | MCP servers for Cursor, Claude Code, and Kimi Code |
 
 ## Contributing
 
