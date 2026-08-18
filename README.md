@@ -12,7 +12,7 @@ n<div align="center">
 
 ### Stop repeating yourself to AI. Write the rules once.
 
-**20 production-ready configuration templates for Cursor, Claude Code, Kimi Code, Copilot, and more.**
+**20 production configuration templates for Cursor, Claude Code, Kimi Code, Copilot, and more.**
 
 Copy-paste a rule file → your AI assistant instantly writes better code.
 
@@ -35,7 +35,7 @@ return <div>{data.name}</div>;
 // No types. No error handling. No loading state. No tests.
 ```
 
-**With `react.md` rules** — AI generates production-ready code:
+**With `react.md` rules** — AI generates production code:
 ```tsx
 const { data, isLoading, error } = useQuery({
   queryKey: ['user'],
