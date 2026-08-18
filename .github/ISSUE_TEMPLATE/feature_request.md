@@ -28,7 +28,7 @@ If you have specific rules in mind, please share them:
 ## Core Principles
 - ...
 
-## Best Practices
+## Proven Patterns
 - ...
 ```
 

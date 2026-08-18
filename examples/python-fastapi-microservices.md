@@ -65,6 +65,6 @@ services/
 The combined rules ensure your AI assistant:
 1. Generates **FastAPI** code with proper async patterns
 2. Follows **microservices** architecture principles
-3. Implements **RESTful API** best practices
+3. Implements **RESTful API** proven patterns
 4. Handles **error cases** properly
 5. Writes **testable** code

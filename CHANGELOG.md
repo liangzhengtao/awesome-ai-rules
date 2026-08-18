@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Framework Rules
-- React rules (18+ best practices)
+- React rules (18+ proven patterns)
 - Next.js rules (App Router, Server Components)
 - Vue.js rules (Composition API, Pinia)
 - Python FastAPI rules (async, Pydantic)
@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Copilot rules (.github/copilot-instructions.md)
 
 #### Documentation
-- Comprehensive README (Chinese + English)
+- Complete README (Chinese + English)
 - Contributing guidelines (CONTRIBUTING.md)
 - MIT License
 

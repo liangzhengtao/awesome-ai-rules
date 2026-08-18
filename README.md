@@ -114,7 +114,7 @@ Each rule file follows a standard structure:
 ```
 Core Principles    →  3–5 non-negotiable rules
 Code Style         →  Naming, file structure, formatting
-Best Practices     →  Framework-specific patterns with code examples
+Proven Patterns     →  Framework-specific patterns with code examples
 Common Pitfalls    →  ❌ Anti-patterns → ✅ Correct patterns
 Dependencies       →  Recommended libraries
 Project-Specific   →  Fill-in section for your project

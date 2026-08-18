@@ -208,7 +208,7 @@ git push origin add-react-native-rules
 feat(react): add React Native framework rules
 
 - Add React Native specific rules
-- Include best practices for navigation
+- Include proven patterns for navigation
 - Add testing guidelines
 
 Closes #123

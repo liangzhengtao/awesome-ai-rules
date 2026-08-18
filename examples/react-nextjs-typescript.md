@@ -33,7 +33,7 @@ cat rules/scenarios/performance.md >> .cursorrules
 - Hooks: use prefix (useAuth, useFetch)
 - Files: kebab-case (user-profile.tsx)
 
-## Best Practices
+## Proven Patterns
 - Server Components by default, Client Components only when needed
 - Use fetch() in Server Components, React Query for client state
 - Implement proper error boundaries
@@ -55,10 +55,10 @@ cat rules/scenarios/performance.md >> .cursorrules
 ## Why This Works
 
 By combining rules, your AI assistant understands:
-1. **React** patterns and best practices
+1. **React** patterns and proven patterns
 2. **Next.js** specific features (App Router, Server Components)
 3. **TypeScript** type safety requirements
 4. **Testing** standards
 5. **Performance** optimization techniques
 
-This gives the AI comprehensive context to generate high-quality, consistent code.
+This gives the AI complete context to generate high-quality, consistent code.
