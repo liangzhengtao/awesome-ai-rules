@@ -6,7 +6,7 @@ n<div align="center">
 </div>
 
 
-# 🧠 Awesome AI Rules
+# 🧠 Awesome AI Rules | 精选 AI 规则 | Awesome AI ルール
 
 <div align="center">
 
