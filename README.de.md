@@ -1,5 +1,6 @@
 [English](README.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Español](README.es.md) | [العربية](README.ar.md) | [한국어](README.ko.md) | [Português](README.pt.md) | [Русский](README.ru.md) | [Deutsch](README.de.md)
-n<div align="center">
+
+<div align="center">
 
 <img src=".banner.svg" width="100%" alt="banner">
 
@@ -10,11 +11,11 @@ n<div align="center">
 
 <div align="center">
 
-### Arrêtez de vous répéter face à l'IA. Écrivez les règles une fois.
+### Hören Sie auf, sich bei der KI zu wiederholen. Schreiben Sie die Regeln einmal.
 
-**20 modèles de configuration prêts à l'emploi pour Cursor, Claude Code, Kimi Code, Copilot et plus.**
+**20 Produktions-Konfigurationsvorlagen für Cursor, Claude Code, Kimi Code, Copilot und mehr.**
 
-Copiez-collez un fichier de règles → votre assistant IA écrit immédiatement un meilleur code.
+Regeldatei kopieren → Ihr KI-Assistent schreibt sofort besseren Code.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -25,17 +26,17 @@ Copiez-collez un fichier de règles → votre assistant IA écrit immédiatement
 
 ---
 
-## Avant / Après
+## Vorher / Nachher
 
-**Sans règles** — L'IA génère du code générique et incohérent :
+**Ohne Regeln** — KI generiert generischen, inkonsistenten Code:
 ```tsx
 const user = await fetch('/api/user');
 const data = await user.json();
 return <div>{data.name}</div>;
-// Pas de types. Pas de gestion d'erreurs. Pas d'état de chargement. Pas de tests.
+// No types. No error handling. No loading state. No tests.
 ```
 
-**Avec les règles `react.md`** — L'IA génère du code de production :
+**Mit `react.md` Regeln** — KI generiert produktionsreifen Code:
 ```tsx
 const { data, isLoading, error } = useQuery({
   queryKey: ['user'],
@@ -44,21 +45,21 @@ const { data, isLoading, error } = useQuery({
 if (isLoading) return <Skeleton />;
 if (error) return <ErrorBoundary error={error} />;
 return <UserProfile user={data} />;
-// Typé. Testé. Accessible. Vos conventions.
+// Typed. Tested. Accessible. Your conventions.
 ```
 
 ---
 
-## Démarrage rapide
+## Schnellstart
 
 ```bash
-# Choisissez votre outil, copiez la règle
+# Wählen Sie Ihr Tool, kopieren Sie die Regel
 cp rules/frameworks/react.md .cursorrules        # Cursor
 cp rules/frameworks/react.md CLAUDE.md            # Claude Code
 cp rules/frameworks/react.md AGENTS.md             # Kimi Code
 ```
 
-**Combiner plusieurs règles :**
+**Mehrere Regeln kombinieren:**
 ```bash
 cat rules/frameworks/react.md > .cursorrules
 cat rules/frameworks/typescript.md >> .cursorrules
@@ -67,12 +68,12 @@ cat rules/scenarios/testing.md >> .cursorrules
 
 ---
 
-## 20 règles — 3 catégories
+## 20 Regeln — 3 Kategorien
 
 ### 🛠️ Frameworks (7)
 
-| Règle | Cibles |
-|-------|--------|
+| Regel | Ziele |
+|-------|-------|
 | [React](rules/frameworks/react.md) | React 19+ / Server Components / React Compiler |
 | [Next.js](rules/frameworks/nextjs.md) | Next.js 15+ / App Router / Async APIs |
 | [Vue](rules/frameworks/vue.md) | Vue 3.4+ / Composition API / Pinia |
@@ -81,9 +82,9 @@ cat rules/scenarios/testing.md >> .cursorrules
 | [Rust](rules/frameworks/rust.md) | Rust 1.75+ / Axum 0.7+ / Tokio |
 | [Go](rules/frameworks/go.md) | Go 1.22+ / Chi 5.x |
 
-### 🎭 Scénarios (7)
+### 🎭 Szenarien (7)
 
-| Règle | Couverture |
+| Regel | Abdeckung |
 |-------|-----------|
 | [Monorepo](rules/scenarios/monorepo.md) | Turborepo / pnpm workspaces / Changesets |
 | [Microservices](rules/scenarios/microservices.md) | gRPC / Kafka / Kubernetes / Saga |
@@ -93,10 +94,10 @@ cat rules/scenarios/testing.md >> .cursorrules
 | [Testing](rules/scenarios/testing.md) | Vitest / Playwright / React Testing Library |
 | [Performance](rules/scenarios/performance.md) | Core Web Vitals / Vite 5+ / Caching |
 
-### 🔧 Outils (6)
+### 🔧 Tools (6)
 
-| Règle | Outil |
-|-------|-------|
+| Regel | Tool |
+|-------|------|
 | [Cursor](rules/tools/cursor.md) | Cursor 0.40+ |
 | [Claude Code](rules/tools/claude-code.md) | Anthropic Claude Code |
 | [Kimi Code](rules/tools/kimi-code.md) | Moonshot Kimi Code |
@@ -106,60 +107,60 @@ cat rules/scenarios/testing.md >> .cursorrules
 
 ---
 
-## Comment fonctionnent les règles
+## So funktionieren Regeln
 
-Chaque fichier de règles suit une structure standard :
+Jede Regeldatei folgt einer Standardstruktur:
 
 ```
-Principes fondamentaux  →  3–5 règles non négociables
-Style de code           →  Nommage, structure des fichiers, formatage
-Patterns éprouvés       →  Patterns spécifiques au framework avec exemples de code
-Pièges courants         →  ❌ Anti-patterns → ✅ Patterns corrects
-Dépendances             →  Bibliothèques recommandées
-Spécifique au projet    →  Section à remplir pour votre projet
+Core Principles    →  3–5 nicht verhandelbare Regeln
+Code Style         →  Benennung, Dateistruktur, Formatierung
+Proven Patterns    →  Framework-spezifische Muster mit Codebeispielen
+Common Pitfalls    →  ❌ Anti-Patterns → ✅ Korrekte Patterns
+Dependencies       →  Empfohlene Bibliotheken
+Project-Specific   →  Ausfüllbare Sektion für Ihr Projekt
 ```
 
-Toutes les règles comportent des **annotations de version** pour connaître la version du framework ciblée.
+Alle Regeln haben **Versionshinweise**, damit Sie wissen, welche Framework-Version sie anvisieren.
 
 ---
 
-## Outils compagnons
+## Begleiter
 
-| Outil | Objectif |
-|-------|----------|
-| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — notez la préparation IA de votre projet |
+| Tool | Zweck |
+|------|-------|
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — Bewerten Sie die KI-Bereitschaft Ihres Projekts |
 
 ---
 
 ## FAQ
 
-**Quels outils prennent en charge les règles personnalisées ?**
+**Welche Tools unterstützen benutzerdefinierte Regeln?**
 Cursor (`.cursorrules`), Claude Code (`CLAUDE.md`), Kimi Code (`AGENTS.md`), GitHub Copilot (`.github/copilot-instructions.md`), Windsurf (`.windsurfrules`), Cline (`.clinerules`).
 
-**Combien de règles devrais-je utiliser ?**
-1–3 règles de framework + 1–2 règles de scénario. N'en mettez pas trop — concentrez-vous sur votre stack.
+**Wie viele Regeln sollte ich verwenden?**
+1–3 Framework-Regeln + 1–2 Szenario-Regeln. Nicht alles auf einmal — konzentrieren Sie sich auf Ihren Stack.
 
-**Ces règles sont-elles spécifiques à une version de framework ?**
-Oui. Chaque fichier comporte une annotation `Last updated: 2026 | Targets: [version]`.
+**Sind diese Regeln frameworkversionsspezifisch?**
+Ja. Jede Datei hat eine `Last updated: 2026 | Targets: [version]`-Anmerkung.
 
-**Puis-je contribuer ?**
-Oui ! Consultez [CONTRIBUTING.md](CONTRIBUTING.md). Nous avons particulièrement besoin de règles pour les nouveaux frameworks et outils.
+**Kann ich beitragen?**
+Ja! Siehe [CONTRIBUTING.md](CONTRIBUTING.md). Wir brauchen besonders Regeln für neue Frameworks und Tools.
 
 ---
 
-## Voir aussi
+## Siehe auch
 
-| Projet | Description |
-|--------|-------------|
-| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — Notez la préparation IA de votre projet |
-| [**ai-commit**](https://github.com/liangzhengtao/ai-commit) | `npx ai-commit` — L'IA écrit vos messages de commit |
-| [**awesome-mcp-servers**](https://github.com/liangzhengtao/awesome-mcp-servers) | Serveurs MCP pour Cursor, Claude Code et Kimi Code |
+| Projekt | Beschreibung |
+|---------|-------------|
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — KI-Bereitschaft bewerten |
+| [**ai-commit**](https://github.com/liangzhengtao/ai-commit) | `npx ai-commit` — KI schreibt Commit-Nachrichten |
+| [**awesome-mcp-servers**](https://github.com/liangzhengtao/awesome-mcp-servers) | MCP-Server für Cursor, Claude Code und Kimi Code |
 
-## Contribuer
+## Mitwirken
 
-Voir [CONTRIBUTING.md](CONTRIBUTING.md).
+Siehe [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Licence
+## Lizenz
 
 [MIT](LICENSE)
 
@@ -167,7 +168,7 @@ Voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
 <div align="center">
 
-**Donnez une étoile si ce projet vous a fait gagner du temps ⭐**
+**Stern vergeben, wenn es Zeit gespart hat ⭐**
 
 </div>
 
