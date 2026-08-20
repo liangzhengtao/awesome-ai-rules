@@ -10,11 +10,11 @@ n<div align="center">
 
 <div align="center">
 
-### Stop repeating yourself to AI. Write the rules once.
+### Deja de repetirle lo mismo a la IA. Escribe las reglas una sola vez.
 
-**20 production configuration templates for Cursor, Claude Code, Kimi Code, Copilot, and more.**
+**20 plantillas de configuración listas para producción para Cursor, Claude Code, Kimi Code, Copilot y más.**
 
-Copy-paste a rule file → your AI assistant instantly writes better code.
+Copia y pega un archivo de reglas → tu asistente de IA escribe mejor código al instante.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -25,17 +25,17 @@ Copy-paste a rule file → your AI assistant instantly writes better code.
 
 ---
 
-## Before / After
+## Antes / Después
 
-**Without rules** — AI generates generic, inconsistent code:
+**Sin reglas** — La IA genera código genérico e inconsistente:
 ```tsx
 const user = await fetch('/api/user');
 const data = await user.json();
 return <div>{data.name}</div>;
-// No types. No error handling. No loading state. No tests.
+// Sin tipos. Sin manejo de errores. Sin estado de carga. Sin tests.
 ```
 
-**With `react.md` rules** — AI generates production code:
+**Con reglas `react.md`** — La IA genera código de producción:
 ```tsx
 const { data, isLoading, error } = useQuery({
   queryKey: ['user'],
@@ -44,21 +44,21 @@ const { data, isLoading, error } = useQuery({
 if (isLoading) return <Skeleton />;
 if (error) return <ErrorBoundary error={error} />;
 return <UserProfile user={data} />;
-// Typed. Tested. Accessible. Your conventions.
+// Tipado. Testeado. Accesible. Tus convenciones.
 ```
 
 ---
 
-## Quick Start
+## Inicio rápido
 
 ```bash
-# Pick your tool, copy the rule
+# Elige tu herramienta, copia la regla
 cp rules/frameworks/react.md .cursorrules        # Cursor
 cp rules/frameworks/react.md CLAUDE.md            # Claude Code
 cp rules/frameworks/react.md AGENTS.md             # Kimi Code
 ```
 
-**Stack multiple rules:**
+**Apilar múltiples reglas:**
 ```bash
 cat rules/frameworks/react.md > .cursorrules
 cat rules/frameworks/typescript.md >> .cursorrules
@@ -67,12 +67,12 @@ cat rules/scenarios/testing.md >> .cursorrules
 
 ---
 
-## 20 Rules — 3 Categories
+## 20 reglas — 3 categorías
 
 ### 🛠️ Frameworks (7)
 
-| Rule | Targets |
-|------|---------|
+| Regla | Objetivos |
+|-------|----------|
 | [React](rules/frameworks/react.md) | React 19+ / Server Components / React Compiler |
 | [Next.js](rules/frameworks/nextjs.md) | Next.js 15+ / App Router / Async APIs |
 | [Vue](rules/frameworks/vue.md) | Vue 3.4+ / Composition API / Pinia |
@@ -81,10 +81,10 @@ cat rules/scenarios/testing.md >> .cursorrules
 | [Rust](rules/frameworks/rust.md) | Rust 1.75+ / Axum 0.7+ / Tokio |
 | [Go](rules/frameworks/go.md) | Go 1.22+ / Chi 5.x |
 
-### 🎭 Scenarios (7)
+### 🎭 Escenarios (7)
 
-| Rule | What It Covers |
-|------|----------------|
+| Regla | Cobertura |
+|-------|----------|
 | [Monorepo](rules/scenarios/monorepo.md) | Turborepo / pnpm workspaces / Changesets |
 | [Microservices](rules/scenarios/microservices.md) | gRPC / Kafka / Kubernetes / Saga |
 | [Mobile App](rules/scenarios/mobile-app.md) | React Native 0.74+ / Flutter 3.22+ |
@@ -93,10 +93,10 @@ cat rules/scenarios/testing.md >> .cursorrules
 | [Testing](rules/scenarios/testing.md) | Vitest / Playwright / React Testing Library |
 | [Performance](rules/scenarios/performance.md) | Core Web Vitals / Vite 5+ / Caching |
 
-### 🔧 Tools (6)
+### 🔧 Herramientas (6)
 
-| Rule | Tool |
-|------|------|
+| Regla | Herramienta |
+|-------|------------|
 | [Cursor](rules/tools/cursor.md) | Cursor 0.40+ |
 | [Claude Code](rules/tools/claude-code.md) | Anthropic Claude Code |
 | [Kimi Code](rules/tools/kimi-code.md) | Moonshot Kimi Code |
@@ -106,60 +106,60 @@ cat rules/scenarios/testing.md >> .cursorrules
 
 ---
 
-## How Rules Work
+## Cómo funcionan las reglas
 
-Each rule file follows a standard structure:
+Cada archivo de reglas sigue una estructura estándar:
 
 ```
-Core Principles    →  3–5 non-negotiable rules
-Code Style         →  Naming, file structure, formatting
-Proven Patterns     →  Framework-specific patterns with code examples
-Common Pitfalls    →  ❌ Anti-patterns → ✅ Correct patterns
-Dependencies       →  Recommended libraries
-Project-Specific   →  Fill-in section for your project
+Principios fundamentales  →  3–5 reglas innegociables
+Estilo de código          →  Nomenclatura, estructura de archivos, formato
+Patrones probados         →  Patrones específicos del framework con ejemplos de código
+Errores comunes           →  ❌ Anti-patrones → ✅ Patrones correctos
+Dependencias              →  Bibliotecas recomendadas
+Específico del proyecto   →  Sección para completar con tu proyecto
 ```
 
-All rules have **version annotations** so you know which framework version they target.
+Todas las reglas tienen **anotaciones de versión** para saber qué versión de framework apuntan.
 
 ---
 
-## Companions
+## Herramientas complementarias
 
-| Tool | Purpose |
-|------|---------|
-| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — score your project's AI-readiness |
+| Herramienta | Propósito |
+|-------------|----------|
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — evalúa la preparación de IA de tu proyecto |
 
 ---
 
 ## FAQ
 
-**Which tools support custom rules?**
+**¿Qué herramientas soportan reglas personalizadas?**
 Cursor (`.cursorrules`), Claude Code (`CLAUDE.md`), Kimi Code (`AGENTS.md`), GitHub Copilot (`.github/copilot-instructions.md`), Windsurf (`.windsurfrules`), Cline (`.clinerules`).
 
-**How many rules should I use?**
-1–3 framework rules + 1–2 scenario rules. Don't dump everything — keep it focused on your stack.
+**¿Cuántas reglas debería usar?**
+1–3 reglas de framework + 1–2 reglas de escenario. No lo pongas todo — enfócate en tu stack actual.
 
-**Are these rules framework-version-specific?**
-Yes. Each file has a `Last updated: 2026 | Targets: [version]` annotation.
+**¿Estas reglas son específicas de una versión de framework?**
+Sí. Cada archivo tiene una anotación `Last updated: 2026 | Targets: [versión]`.
 
-**Can I contribute?**
-Yes! See [CONTRIBUTING.md](CONTRIBUTING.md). We especially need rules for new frameworks and tools.
+**¿Puedo contribuir?**
+¡Sí! Consulta [CONTRIBUTING.md](CONTRIBUTING.md). Especialmente necesitamos reglas para nuevos frameworks y herramientas.
 
 ---
 
-## See Also
+## Ver también
 
-| Project | Description |
-|---------|-------------|
-| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — Score your project's AI-readiness |
-| [**ai-commit**](https://github.com/liangzhengtao/ai-commit) | `npx ai-commit` — AI writes your commit messages |
-| [**awesome-mcp-servers**](https://github.com/liangzhengtao/awesome-mcp-servers) | MCP servers for Cursor, Claude Code, and Kimi Code |
+| Proyecto | Descripción |
+|----------|-------------|
+| [**vibe-check**](https://github.com/liangzhengtao/vibe-check) | `npx vibe-check` — Evalúa la preparación de IA de tu proyecto |
+| [**ai-commit**](https://github.com/liangzhengtao/ai-commit) | `npx ai-commit` — La IA escribe tus mensajes de commit |
+| [**awesome-mcp-servers**](https://github.com/liangzhengtao/awesome-mcp-servers) | Servidores MCP para Cursor, Claude Code y Kimi Code |
 
-## Contributing
+## Contribuir
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## License
+## Licencia
 
 [MIT](LICENSE)
 
@@ -167,7 +167,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 <div align="center">
 
-**Star this repo if it saved you time ⭐**
+**Dale una estrella si te ahorró tiempo ⭐**
 
 </div>
 
